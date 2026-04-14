@@ -133,7 +133,8 @@ body {
 
 .team-name {
   background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  // color: var(--color-on-primary);
+  color: var(--color-accent);
   font-weight: 600;
   padding: 6px 24px;
   min-height: 24px;
@@ -198,7 +199,8 @@ body {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  color: var(--color-on-primary);
+  // color: var(--color-on-primary);
+  color: var(--color-accent);
 }
 
 .odds {
@@ -259,6 +261,7 @@ body {
 
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  color: var(--color-accent);
 
   i {
     font-style: normal;

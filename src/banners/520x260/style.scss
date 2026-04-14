@@ -118,7 +118,8 @@ body {
   height: 100%;
   max-height: 140px;
   background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  // color: var(--color-on-primary);
+  color: var(--color-accent);
   font-size: 18px;
   border-radius: var(--global-padding);
   display: grid;
@@ -156,7 +157,8 @@ body {
   place-self: center;
   display: flex;
   flex-direction: column-reverse;
-  color: var(--color-on-primary);
+  // color: var(--color-on-primary);
+  color: var(--color-accent);
 }
 
 .odds {
@@ -224,6 +226,7 @@ footer {
 
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  color: var(--color-accent);
 
   i {
     font-style: normal;

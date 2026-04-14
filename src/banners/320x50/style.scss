@@ -142,7 +142,8 @@ body {
   justify-content: center
   text;
   background-color: var(--color-primary);
-  color: var(--color-on-primary);
+  // color: var(--color-on-primary);
+  color: var(--color-accent);
 
   font-weight: 600;
   padding: 2px 4px 2px 12px;
@@ -212,7 +213,8 @@ body {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  color: var(--color-on-primary);
+  // color: var(--color-on-primary);
+  color: var(--color-accent);
   flex-shrink: 0;
 }
 
@@ -228,8 +230,6 @@ body {
   span {
     display: inline-block;
     white-space: nowrap;
-
-    color: var(--color-on-primary);
     flex-grow: 1;
   }
 }
@@ -299,6 +299,7 @@ body {
 
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  color: var(--color-accent);
 
   br {
     display: none;
