@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="ad.type" content="banner" />
+  <meta name="ad.size" content="width=300,height=600" />
+  <meta name="ad.vars" content="auto_button=1" />
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Theme Generator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="scss/palette.scss" />
+</head>
+
+<body onload="init()">
+
+  <div id="animation_container">
+    <div class="brand-colors">
+      <div class="primary">Primary</div>
+      <div class="secondary">Secondary</div>
+      <div class="accent">Accent</div>
+      <div class="neutral">Neutral</div>
+    </div>
+    <div class="generated-colors">
+      <div class="primary">
+        <div>10</div>
+        <div>20</div>
+        <div>30</div>
+        <div>40</div>
+        <div>50</div>
+        <div>60</div>
+        <div>70</div>
+        <div>80</div>
+        <div>90</div>
+        <div>95</div>
+        <div>98</div>
+      </div>
+      <div class="secondary">
+        <div>10</div>
+        <div>20</div>
+        <div>30</div>
+        <div>40</div>
+        <div>50</div>
+        <div>60</div>
+        <div>70</div>
+        <div>80</div>
+        <div>90</div>
+        <div>95</div>
+        <div>98</div>
+      </div>
+      <div class="accent">
+        <div>10</div>
+        <div>20</div>
+        <div>30</div>
+        <div>40</div>
+        <div>50</div>
+        <div>60</div>
+        <div>70</div>
+        <div>80</div>
+        <div>90</div>
+        <div>95</div>
+        <div>98</div>
+      </div>
+      <div class="neutral">
+        <div>10</div>
+        <div>20</div>
+        <div>30</div>
+        <div>40</div>
+        <div>50</div>
+        <div>60</div>
+        <div>70</div>
+        <div>80</div>
+        <div>90</div>
+        <div>95</div>
+        <div>98</div>
+      </div>
+    </div>
+    <div class="gradients">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div style="--color: #f00; padding: 10px; background-color: var(--color);" class="contrast-color">
+      test
+    </div>
+
+  </div>
+
+  <script type="module" src="js/palette.js"></script>
+</body>
+
+</html>

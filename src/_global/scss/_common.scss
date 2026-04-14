@@ -1,0 +1,40 @@
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+#animation_container {
+    background-color: white;
+}
+
+.message {
+    will-change: transform;
+    color: white;
+}
+
+/* Transitions */
+
+.error {
+    padding: 1em;
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+    border-radius: 0.25em;
+}
+
+@keyframes conic-effect {
+    0% {
+        --angle: 0deg;
+    }
+
+    100% {
+        --angle: 360deg;
+    }
+}
+
+.team-name {
+    & > h2 {
+        word-break: normal;
+        overflow-wrap: anywhere;
+    }
+}

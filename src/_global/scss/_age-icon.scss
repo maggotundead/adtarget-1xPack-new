@@ -1,0 +1,59 @@
+.age-icon {
+    // flex: 1 0 auto;
+
+    font-size: round(1em, 2px); //2px
+
+    display: inline-grid;
+    place-items: center;
+    line-height: 2;
+    white-space: nowrap;
+    width: 2em;
+    height: 2em;
+    aspect-ratio: 1;
+    // padding: 0.5em;
+
+    font-weight: bold;
+    text-rendering: geometricPrecision;
+
+    position: relative;
+
+    transform: rotate3d(0, 0, 1, 0.02deg);
+    will-change: contents;
+
+    &::after {
+        content: "+";
+        display: block;
+        position: absolute;
+        // width: min-content;
+        z-index: 1;
+        // right: -0.5ex;
+        right: 0;
+        translate: 50% 0;
+    }
+
+    --b: round(max(2px, 0.2em), 1px);
+    --c: currentColor;
+
+    margin: var(--b);
+
+    &::before {
+        backface-visibility: hidden;
+
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        inset: calc(var(--b) * -1);
+        background: conic-gradient(from 125deg, var(--c) 290deg, #0000 0);
+
+        mask: radial-gradient(
+            farthest-side,
+            #0000 calc(90% - var(--b)),
+            #000 calc(95% - var(--b)),
+            #000 calc(95%),
+            #0000
+        );
+
+        filter: blur(1px);
+        opacity: 0.99;
+    }
+}

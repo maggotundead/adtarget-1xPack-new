@@ -1,0 +1,157 @@
+{
+  "textLang": "en",
+  "animation": true,
+  "mobile": "mobile.html",
+  "brand": {
+    "logo": {
+      "landscape": {
+        "onLight": "./demo-data/logo/lbg_h.svg",
+        "onDark": ""
+      },
+      "portrait": {
+        "onLight": "./demo-data/logo/lbg_v.svg",
+        "onDark": ""
+      },
+      "brandmark": {
+        "onLight": "",
+        "onDark": ""
+      }
+    },
+    "font": {
+      "styleUrl": "https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=block",
+      "body": {
+        "family": "Inter",
+        "weight": 700
+      },
+      "heading": {
+        "weight": 900
+      }
+    },
+    "color": {
+      "primary": "#1555BE",
+      "secondary": "#88E221",
+      "accent": "#93E20B"
+    }
+  },
+  "settings": {
+    "legalSettings": {
+      "icon": "gavel",
+      "name": "Legal Settings",
+      "description": "Use it if you have to, according to the laws of your country",
+      "items": {
+        "showLegal": {
+          "type": "switch",
+          "label": "Show legal information",
+          "value": false
+        },
+        "minAge": {
+          "type": "number",
+          "label": "Minimum age",
+          "description": "0 or empty - no icon will be showed",
+          "min": 0,
+          "max": 99,
+          "value": 21,
+          "trigger": {
+            "action": "show",
+            "field": "showLegal",
+            "condition": true
+          }
+        },
+        "legalNote": {
+          "type": "textarea",
+          "label": "Legal / License Text",
+          "description": "Licence and other legal information",
+          "value": {
+            "text": "Лицензия №22030324 от 02.11.2022 г. выдана РГУ \"Комитет индустрии туризма Министерства культуры и спорта Республики Казахстан\". Срок&nbsp;действия до 29.11.2029 г."
+          },
+          "trigger": {
+            "action": "show",
+            "field": "showLegal",
+            "condition": true
+          }
+        }
+      }
+    },
+    "commonSettings": {
+      "name": "Common settings",
+      "icon": "instant_mix",
+      "items": {
+        "bgImageUrl": {
+          "type": "mediaupload",
+          "label": "Background Image",
+          "description": "jpg recommended",
+          "mode": "image",
+          "value": "./img/bg.png",
+          "maxSize": 500
+        },
+        "primaryMessage": {
+          "label": "Message, showed between feed items impressions",
+          "type": "text-rte",
+          "min": 5,
+          "max": 60,
+          "value": {
+            "text": "Place bets \n on the <br> best football matches and <i>win big!</i>",
+            "style": {
+              "font": "heading",
+              "transform": "uppercase",
+              "style": "normal"
+            }
+          }
+        },
+        "ctaButton": {
+          "type": "text",
+          "label": "CTA Button text",
+          "min": 5,
+          "max": 50,
+          "value": {
+            "text": "Place a bet"
+          }
+        }
+      }
+    },
+    "feedSettings": {
+      "name": "Animation",
+      "icon": "slideshow",
+      "items": {
+        "pauseOnHover": {
+          "label": "Pause on hover",
+          "type": "switch",
+          "value": true
+        },
+        "eventSwapInterval": {
+          "label": "Event swap interval, seconds",
+          "type": "number",
+          "min": 2,
+          "max": 10,
+          "value": 3
+        },
+        "startWithMessage": {
+          "type": "switch",
+          "label": "Start with message",
+          "value": true
+        },
+        "msgPerLoop": {
+          "type": "switch",
+          "label": "Show one message per All items",
+          "value": false
+        },
+        "msgPerItemsNum": {
+          "label": "Number of items between message impression",
+          "type": "number",
+          "min": 1,
+          "max": 100,
+          "value": 2,
+          "trigger": {
+            "field": "msgPerLoop",
+            "action": "show",
+            "condition": false
+          }
+        }
+      }
+    }
+  },
+  "data": {
+    "url": "./demo-data/data.json",
+    "list": null
+  }
+}

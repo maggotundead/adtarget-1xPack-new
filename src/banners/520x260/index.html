@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Optional ad.vars
+		auto_button - create button or use the button inside (If this tag is omitted then the default is 1) -->
+  <meta name="ad.vars" content="auto_button=1" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title></title>
+
+  <link rel="stylesheet" href="style.scss" />
+</head>
+
+<body onload="init()">
+  <div class="layout" id="animation_container">
+
+    <header>
+      <div class="brand-logo" data-surface="dark" data-variant="landscape"></div>
+    </header>
+
+    <main>
+      <div class="coins">
+        <div class="coin">
+          <img src="./img/coin-1.svg">
+        </div>
+        <div class="coin">
+          <img src="./img/coin-2.svg">
+        </div>
+        <div class="coin">
+          <img src="./img/coin-3.svg">
+        </div>
+        <div class="coin">
+          <img src="./img/coin-4.svg">
+        </div>
+      </div>
+
+      <div class="feed-item">
+
+        <div class="team team1">
+          <div class="team-name">
+            <h2>Manchester United</h2>
+          </div>
+          <div class="team-logo team1"></div>
+        </div>
+
+        <div class="data heading">
+          <div class="date-time">
+            <span class="date">28.07.2024</span>
+            <span class="time">16:00</span>
+          </div>
+          <div class="odds">
+            <span class="home"><em>W1</em> 1.78</span>
+            <span class="draw"><em>X</em> 4.31</span>
+            <span class="away"><em>W2</em> 4.21</span>
+          </div>
+        </div>
+
+        <div class="team team2">
+          <div class="team-logo team2"></div>
+          <div class="team-name">
+            <h2>Tottenham Hotspur</h2>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="message hidden">
+        <div class="rte">Place bets on the best football matches and win big!</div>
+      </div>
+
+    </main>
+
+    <footer>
+
+      <div class="btn-wrapper">
+        <button class="cta-btn">
+          <span class="text">Make a BET / Watch the Line</span>
+        </button>
+      </div>
+
+      <!-- <div class="legal-block hidden">
+        <div class="age-icon">21</div>
+        <p class="legal-note">
+          Short required terms and conditions of service.<br>Licence numbers, etc...
+        </p>
+      </div> -->
+    </footer>
+
+    <div class="legal-block hidden">
+      <div class="age-icon">21</div>
+      <p class="legal-note">
+        Short required terms and conditions of service.<br>Licence numbers, etc...
+      </p>
+    </div>
+
+  </div>
+  <script type="module" src="main.js"></script>
+</body>

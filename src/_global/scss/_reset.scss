@@ -1,0 +1,158 @@
+/*
+DON'T MODIFY THIS!
+===================================================================*/
+
+:root {
+  // Private default vars
+  --_font-family: system-ui, sans-serif;
+  // --_font-size: 14px;
+
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0);
+  -webkit-tap-highlight-color: transparent;
+
+  // Text Body
+  --font-family: var(--brand-font-body-family, var(--_font-family));
+  --font-weight: var(--brand-font-body-weight, normal);
+  --font-style: var(--brand-font-body-style, normal);
+  // --font-transform: var(--brand-font-body-transform, none); // ?
+  --font-size: 14px;
+
+  // Text Heading
+  --font-heading-family: var(--brand-font-heading-family, var(--brand-font-body-family, var(--_font-family)));
+  --font-heading-weight: var(--brand-font-heading-weight, var(--brand-font-body-weight, bold));
+  --font-heading-style: var(--brand-font-heading-style, var(--brand-font-body-style, normal));
+  // --font-heading-transform: var(--brand-font-heading-transform, var(--brand-font-body-transform, none)); //?
+  --font-heading-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+
+  &:focus {
+    outline: 0 none;
+  }
+
+  margin: 0;
+  padding: 0;
+}
+
+// Prevent font size inflation
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none; //100%
+}
+
+a:focus,
+a:focus-visible {
+  outline: 0 none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+:where(body) {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-style: var(--font-style);
+  font-size: var(--font-size);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+
+  display: flex;
+  background-color: var(--color-primary-10);
+}
+
+:where(h1, h2, h3, h4, h5, h6, .heading) {
+  font-family: var(--font-heading-family);
+  font-weight: var(--font-heading-weight);
+  font-style: var(--font-heading-style);
+  font-size: var(--font-heading-size);
+}
+
+// Improve media defaults
+:where(img, picture, video, canvas, svg) {
+  display: block;
+  max-width: 100%;
+}
+
+// Button reset
+:where(button, input[type="button"]) {
+  all: unset;
+  appearance: none;
+  // outline: revert;
+}
+
+// Remove built-in form typography styles
+:where(button, textarea, input, select) {
+  font: inherit;
+}
+
+// Avoid text overflows
+// :where(p, h1, h2, h3, h4, h5, h6) {
+//   overflow-wrap: break-word;
+// }
+
+//  Balance text wrapping on headings
+:where(h1, h2, h3, h4) {
+  text-wrap: balance;
+}
+:where(p, h5, h6) {
+  text-wrap: pretty;
+}
+
+// List reset
+:where(ol, ul, li) {
+  list-style: none;
+  text-indent: 0;
+}
+
+#animation_container {
+  width: var(--ad-width, 100%);
+  height: var(--ad-height, 100%);
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+
+  background-color: var(--color-primary-95);
+
+  clip-path: inset(-1px);
+  html:not(.still) & {
+    transition: clip-path 0.2s ease;
+  }
+
+  html:not(.ready) & {
+    clip-path: inset(-1px -1px calc(100% + 2px) -1px);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+
+    background-color: inherit;
+    background-image: linear-gradient(to bottom in oklab, var(--color-primary), var(--color-secondary));
+
+    opacity: 1;
+
+    html:not(.still) & {
+      transition:
+        opacity 0.5s ease-in,
+        visibility 0s linear 0.5s;
+    }
+
+    html.ready & {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}

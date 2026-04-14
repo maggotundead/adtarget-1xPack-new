@@ -1,0 +1,35 @@
+/*
+DON'T MODIFY THIS!
+===================================================================*/
+
+// Font helper classes
+// Get --rte-* vars from JS if RTE styles was applied
+
+// @property --color {
+//   syntax: "<color>";
+//   inherits: true;
+//   initial-value: transparent;
+// }
+
+.rte {
+  font-family: var(--rte-font-family, inherit);
+  font-style: var(--rte-font-style, inherit);
+  font-weight: var(--rte-font-weight, inherit);
+
+  &.heading {
+    font-family: var(--rte-font-family, var(--font-heading-family));
+    font-weight: var(--rte-font-weight, var(--font-heading-weight));
+    font-style: var(--rte-font-style, var(--font-heading-style));
+  }
+
+  text-transform: var(--rte-font-transform, inherit);
+  color: var(--rte-font-color, inherit);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+:is(.hidden, [hidden]) {
+  display: none !important;
+}

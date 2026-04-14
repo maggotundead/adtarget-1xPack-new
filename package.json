@@ -1,0 +1,23 @@
+{
+  "name": "creative-package",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node build.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@rollup/plugin-strip": "^3.0.4",
+    "autoprefixer": "^10.4.20",
+    "fast-glob": "^3.3.2",
+    "sass": "1.79.5",
+    "vite": "^5.4.9",
+    "vite-plugin-zip-pack": "^1.2.4"
+  },
+  "dependencies": {
+    "culori": "^4.0.1",
+    "motion": "^10.18.0"
+  }
+}

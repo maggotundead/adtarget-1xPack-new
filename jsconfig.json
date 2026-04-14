@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es6",
+    "paths": {
+      "@global/*": [
+        "./src/_global/*"
+      ],
+      "/*": [
+        "./*",
+        "./_public/*"
+      ]
+    }
+  }
+}

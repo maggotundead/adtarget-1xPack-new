@@ -1,0 +1,138 @@
+:root {
+    --glow-hue: var(--color-accent-hue); // 222deg;
+    --shadow-hue: var(--color-primary-hue); //180deg;
+    --spring-easing: linear(
+        0,
+        0.002,
+        0.01 0.9%,
+        0.038 1.8%,
+        0.156,
+        0.312 5.8%,
+        0.789 11.1%,
+        1.015 14.2%,
+        1.096,
+        1.157,
+        1.199,
+        1.224 20.3%,
+        1.231,
+        1.231,
+        1.226,
+        1.214 24.6%,
+        1.176 26.9%,
+        1.057 32.6%,
+        1.007 35.5%,
+        0.984,
+        0.968,
+        0.956,
+        0.949 42%,
+        0.946 44.1%,
+        0.95 46.5%,
+        0.998 57.2%,
+        1.007,
+        1.011 63.3%,
+        1.012 68.3%,
+        0.998 84%,
+        1
+    );
+    --spring-duration: 1.33s;
+}
+
+@keyframes shimmer {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes text {
+    0% {
+        background-position: 100% center;
+    }
+    100% {
+        background-position: -100% center;
+    }
+}
+
+button {
+    display: block;
+    box-sizing: border-box;
+
+    font-family: var(--font-heading-family);
+    font-weight: var(--font-heading-weight);
+    font-style: var(--font-heading-style);
+    font-size: 8cqmin; // var(--font-heading-size);
+    text-transform: uppercase;
+
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    position: relative;
+
+    min-width: min-content;
+
+    text-align: center;
+    // color: var(--color-text-primary);
+    // background-image: linear-gradient(to bottom in oklab, var(--color-primary-90), var(--color-primary-70));
+    background-color: var(--color-accent);
+
+    // isolation: isolate;
+    // box-shadow:
+    //     0 2px 3px 1px hsl(var(--glow-hue) 50% 20% / 50%),
+    //     inset 0 -10px 20px -10px hsla(var(--shadow-hue), 10%, 90%, 95%);
+
+    box-shadow: inset 0 max(2px, 0.125em) 0 0 color-mix(in srgb, var(--color-accent-90), transparent 25%);
+
+    border-radius: 9999px;
+    // scale: 1;
+    // transition: all var(--spring-duration) var(--spring-easing);
+
+    outline: max(2px, 0.125em) solid var(--color-accent);
+    outline-offset: max(2px, 0.1875em);
+}
+
+button.active {
+    // transition-duration: calc(var(--spring-duration) * 0.5);
+    // scale: 1.2;
+    // box-shadow:
+    //     0 4px 8px -2px hsl(var(--glow-hue) 50% 20% / 50%),
+    //     inset 0 0 0 transparent;
+
+    .text {
+        animation: text 1.25s ease-in 0.5s both;
+    }
+}
+
+button .text {
+    color: var(--color-on-accent);
+    color: transparent;
+    background-clip: text;
+    background-color: var(--color-text-primary);
+    background-image: linear-gradient(
+        110deg,
+        transparent,
+        color-mix(in srgb, var(--color-accent-90), transparent 30%) 40%,
+        color-mix(in srgb, var(--color-accent-98), transparent 10%) 50%,
+        transparent 52%
+    );
+    background-repeat: no-repeat;
+    background-size: 300% 300%;
+    background-position: center 200%;
+
+    // hsla(var(--glow-hue), 100%, 80%, 0.66) 40%,
+    // hsla(var(--glow-hue), 100%, 90%, 0.9) 50%,
+}
